@@ -21,5 +21,6 @@ async function saveFile() {
     const filePath = await ipcRenderer.invoke("dialog:saveFile", fileContent);
     if (filePath) {
         alert("Файл збережено за адресою " + filePath);
+        navigate("home"); // Повертаємось на головну сторінку після збереження
     }
 }
